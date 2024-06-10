@@ -7,6 +7,7 @@ const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const { questionsData, correctOptionIds } = require('./questionsData');
+const authMiddleware = require('./authMiddleware');
 
 
 
@@ -104,18 +105,14 @@ app.post('/signup', async (req, res) => {
     }
   });
 
-  app.get('/correct',(req,res)=>{
-    res.json(correctOptionIds);
+ 
 
-  });
-
-
-  app.get('/assess/questions', (req, res) => {
+  app.get('/assess/questions',authMiddleware, (req, res) => {
     
     res.json(questionsData);
   });
 
-  app.post('/updatescore', async (req, res) => {
+  app.post('/updatescore',authMiddleware, async (req, res) => {
     const token = req.headers.authorization?.split(' ')[1];
     if (!token) {
         return res.status(401).json({ error: 'Authorization token required' });
