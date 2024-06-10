@@ -1,0 +1,47 @@
+POST http://localhost:5000/signup
+Content-Type: application/json
+
+{
+    "username": "tanivi3",
+    "password": "tanivi"
+}
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "username": "dheeraj",
+    "password": "dhee2002"
+}
+
+###
+GET http://localhost:5000/assess/questions
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjY1ODdjNTg2NDIxZmY1NzYxZWVjNGIiLCJ1c2VybmFtZSI6ImRoZWVyYWoiLCJpYXQiOjE3MTc5NDQyNDEsImV4cCI6MTcxNzk0Nzg0MX0.IpwOSPU5dUGHnwtsAJrDOG4vXDdiNwPETuzQAE4rssk
+Content-Type: application/json
+
+###
+GET http://localhost:5000/correct
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjY1ODdjNTg2NDIxZmY1NzYxZWVjNGIiLCJ1c2VybmFtZSI6ImRoZWVyYWoiLCJpYXQiOjE3MTc5NDQyNDEsImV4cCI6MTcxNzk0Nzg0MX0.IpwOSPU5dUGHnwtsAJrDOG4vXDdiNwPETuzQAE4rssk
+Content-Type: application/json
+
+###
+
+POST http://localhost:5000/updatescore
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjY1ODdjNTg2NDIxZmY1NzYxZWVjNGIiLCJ1c2VybmFtZSI6ImRoZWVyYWoiLCJpYXQiOjE3MTc5OTIyMjIsImV4cCI6MTcxNzk5NTgyMn0.ezkgJn2mrsg9GYzcZxjpqUoc8oxK_brXtpz6A4oGjsk
+Content-Type: application/json
+
+{
+  "marksSheet": [
+    { "status": "a", "oid": "a8222953-e043-4873-abee-bc5dae13ee51" },
+    { "status": "a", "oid": "354c825a-3a02-401a-bcc0-3e649104fd1e" },
+    { "status": "a", "oid": "f9f95dca-51b9-49f0-bf64-167262e23a35" },
+    { "status": "u", "oid": null },
+    { "status": "u", "oid": null },
+    { "status": "u", "oid": null },
+    { "status": "u", "oid": null },
+    { "status": "u", "oid": null },
+    { "status": "u", "oid": null },
+    { "status": "u", "oid": null }
+  ]
+}
+###
